@@ -37,6 +37,7 @@ module Sisow
           payment.purchase_id,
           payment.entrance_code,
           payment.amount,
+          payment.shop_id,
           Sisow.configuration.merchant_id,
           Sisow.configuration.merchant_key
         ].join
@@ -58,7 +59,7 @@ module Sisow
             :cancelurl    => payment.cancel_url,
             :callbackurl  => payment.callback_url,
             :notifyurl    => payment.notify_url,
-            :shop_id      => payment.shop_id,
+            :shopid       => payment.shop_id,
             :sha1         => sha1
           }
 
